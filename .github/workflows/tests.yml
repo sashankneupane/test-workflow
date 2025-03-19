@@ -17,7 +17,7 @@ jobs:
         with:
           script: |
             console.log('Running tests...')
-            const testsPass = true;
+            const testsPass = false;
             if (!testsPass) {
               console.log('Tests failed!');
               process.exit(1);

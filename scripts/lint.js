@@ -5,6 +5,8 @@ console.log('Running lint checks...');
 
 const shouldPass = process.env.LINT_SHOULD_PASS !== 'false';
 
+// I have set the LINT_SHOULD_PASS env variable to 'false' in github env variables
+
 if (shouldPass) {
   console.log('Lint checks passed successfully!');
   process.exit(0);

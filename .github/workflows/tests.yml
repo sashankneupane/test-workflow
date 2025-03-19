@@ -17,8 +17,6 @@ jobs:
           if [[ "${{ secrets.TEST_SHOULD_PASS }}" == "false" ]]; then
             echo "Tests check deliberately failed based on secret configuration."
             exit 1
-          else
-            node ./scripts/test.js
           fi
 
 

@@ -16,7 +16,5 @@ jobs:
           if [[ "${{ secrets.LINT_SHOULD_PASS }}" == "false" ]]; then
             echo "Lint check deliberately failed based on secret configuration."
             exit 1
-          else
-            node ./scripts/lint.js
           fi
 

@@ -16,7 +16,7 @@ jobs:
         with:
           script: |
             console.log('Running lint checks...');
-            const lintPasses = true;
+            const lintPasses = False;
             if (!lintPasses) {
               console.log('Lint checks failed!');
               process.exit(1);

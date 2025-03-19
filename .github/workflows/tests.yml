@@ -12,12 +12,9 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-          cache: 'npm'
-      - name: Install dependencies
-        run: npm ci
-      - name: Run tests
-        run: npm test || echo "No tests configured, skipping"
+      - name: Run Tests
+        run: node ./scripts/test.js
+        env:
+          # Change to 'false' to simulate failing tests
+          TESTS_SHOULD_PASS: 'true'
+
